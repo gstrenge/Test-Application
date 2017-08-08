@@ -30,6 +30,6 @@ $_SESSION['login'] = 'false';
 		
 		</form>
 	
-	<body>
+	</body>
 
 </html>
