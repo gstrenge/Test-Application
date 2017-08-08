@@ -9,7 +9,8 @@ if (isset($_POST["usernameCreate"]) && !empty($_POST["usernameCreate"]))
 	$queryCheck->bindParam(1,$_POST['usernameCreate']);
 	$queryCheck->execute();
 	
-	while($row = $queryCheck->fetch(PDO::FETCH_ASSOC))
+	$row = $queryCheck->fetch(PDO::FETCH_ASSOC);
+	if(!empty($row))
 	{
 		echo "Username Taken<br>";
 		$_POST['passwordCreate'] = NULL;
